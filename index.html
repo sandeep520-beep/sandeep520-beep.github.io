@@ -1,79 +1,142 @@
 
-<!-- ================================
-ABOUT ME SECTION
-================================ -->
+/* =================================
+   ABOUT ME SECTION
+================================= */
 
-<section id="about">
+#about {
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 30px;
+}
 
-  <h2 class="section-title">About Me</h2>
+/* Section Heading */
 
-  <p class="section-subtitle">
-    A little introduction
-  </p>
+#about .section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #e5f3ff;
+  margin-bottom: 10px;
+}
 
-  <div class="about-container">
+/* Subtitle */
 
-    <div class="about-text">
+#about .section-subtitle {
+  color: #22d3ee;
+  font-size: 15px;
+  margin-bottom: 35px;
+}
 
-      <p>
-        Hello! I am <strong>Sandeep Upadhyay</strong>,
-        currently pursuing M.Tech in Aquacultural Engineering
-        at the Indian Institute of Technology Kharagpur
-        (IIT Kharagpur), with a B.Tech background in
-        Agricultural Engineering.
-      </p>
+/* Main Container */
 
-      <p>
-        My interests lie in <strong>Data Science,
-        Machine Learning, Artificial Intelligence,
-        Computer Vision, Python Programming</strong>,
-        and IoT-based intelligent systems.
-      </p>
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
 
-      <p>
-        My current academic research focuses on
-        computer-vision-based analysis and mathematical
-        modeling of fish swimming locomotion,
-        combining experimental methods with
-        computational techniques.
-      </p>
+/* About Text */
 
-      <p>
-        I enjoy exploring innovative technologies,
-        developing intelligent solutions, and applying
-        computational methods to real-world engineering
-        and research challenges.
-      </p>
+.about-text {
+  max-width: 900px;
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.9;
+}
 
-    </div>
+/* Paragraph Spacing */
 
-    <!-- ABOUT INFORMATION CARDS -->
+.about-text p {
+  margin-bottom: 20px;
+}
 
-    <div class="about-cards">
+/* Highlight Name and Keywords */
 
-      <div class="about-card">
-        <div class="about-icon">🎓</div>
-        <h3>Education</h3>
-        <p>IIT Kharagpur</p>
-        <span>M.Tech in Aquacultural Engineering</span>
-      </div>
+.about-text strong {
+  color: #22d3ee;
+  font-weight: 700;
+}
 
-      <div class="about-card">
-        <div class="about-icon">💻</div>
-        <h3>Interests</h3>
-        <p>AI & Data Science</p>
-        <span>Machine Learning · Computer Vision</span>
-      </div>
+/* About Cards Layout */
 
-      <div class="about-card">
-        <div class="about-icon">🔬</div>
-        <h3>Research</h3>
-        <p>Fish Locomotion</p>
-        <span>Computer Vision & Mathematical Modeling</span>
-      </div>
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 15px;
+}
 
-    </div>
+/* Individual Cards */
 
-  </div>
+.about-card {
+  background: rgba(30, 50, 75, 0.55);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  border-radius: 16px;
+  padding: 28px 22px;
+  transition: all 0.3s ease;
+}
 
-</section>
+/* Card Hover Effect */
+
+.about-card:hover {
+  transform: translateY(-7px);
+  border-color: #22d3ee;
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.12);
+}
+
+/* Card Icon */
+
+.about-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* Card Heading */
+
+.about-card h3 {
+  color: #e5f3ff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Card Main Text */
+
+.about-card p {
+  color: #22d3ee;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Card Description */
+
+.about-card span {
+  color: #aebed0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+
+  #about {
+    padding: 60px 20px;
+  }
+
+  #about .section-title {
+    font-size: 29px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 23px;
+  }
+
+}
