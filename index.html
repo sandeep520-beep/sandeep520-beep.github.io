@@ -4,243 +4,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sandeep Upadhyay | Portfolio</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0b1120;
-    color: #e5e7eb;
-    line-height: 1.7;
+  font-family: 'Segoe UI', sans-serif;
+  background: #081426;
+  color: #e5edf8;
+  line-height: 1.7;
+}
+
+:root {
+  --blue: #38bdf8;
+  --cyan: #22d3ee;
+  --card: #12233c;
+  --muted: #a9b9ce;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: #111827;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 1px solid #263244;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #0b1930;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #20334d;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: bold;
-    color: #60a5fa;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--blue);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
 
 nav a {
-    color: #d1d5db;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
+  color: #dbeafe;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 nav a:hover {
-    color: #60a5fa;
-}
-
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    padding: 70px 10%;
-    background: radial-gradient(circle at top right, #1e3a5f, #0b1120 65%);
-}
-
-.hero-content {
-    max-width: 850px;
-}
-
-.tag {
-    color: #60a5fa;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-h1 {
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.15;
-    margin: 20px 0;
-    color: white;
-}
-
-.hero h2 {
-    color: #93c5fd;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 700px;
-    color: #cbd5e1;
-    font-size: 17px;
-}
-
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #2563eb;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn:hover {
-    background: #3b82f6;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid #60a5fa;
-    color: #93c5fd;
+  color: var(--cyan);
 }
 
 section {
-    padding: 80px 10%;
+  padding: 90px 9%;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 85% 20%, #164e6380, transparent 35%),
+    #081426;
+}
+
+.tag {
+  color: var(--cyan);
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.15;
+  margin: 20px 0;
+  color: #f8fafc;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero h2 {
+  color: #a5d8ff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 23px;
+  border-radius: 8px;
+  background: #0284c7;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #38bdf8;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #0369a1;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
 }
 
 .section-title {
-    font-size: 35px;
-    color: white;
-    margin-bottom: 35px;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 12px;
 }
 
-.section-title span {
-    color: #60a5fa;
+.section-subtitle {
+  color: var(--blue);
+  margin-bottom: 35px;
 }
 
 .about-text {
-    max-width: 850px;
-    color: #cbd5e1;
-    font-size: 17px;
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 17px;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
 }
 
 .card {
-    background: #151f32;
-    padding: 27px;
-    border: 1px solid #29364c;
-    border-radius: 14px;
-    transition: 0.3s;
+  background: var(--card);
+  padding: 25px;
+  border: 1px solid #263d5b;
+  border-radius: 14px;
+  transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: #60a5fa;
+  transform: translateY(-5px);
+  border-color: var(--blue);
 }
 
 .card h3 {
-    color: #93c5fd;
-    margin-bottom: 12px;
+  color: var(--blue);
+  margin-bottom: 12px;
 }
 
 .card p {
-    color: #cbd5e1;
-    font-size: 15px;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .skill {
-    background: #172b49;
-    border: 1px solid #31547e;
-    padding: 10px 17px;
-    border-radius: 25px;
-    color: #bfdbfe;
+  padding: 10px 17px;
+  border-radius: 7px;
+  background: #153451;
+  border: 1px solid #27658a;
+  color: #a5e5ff;
 }
 
 .project-link {
-    display: inline-block;
-    color: #60a5fa;
-    margin-top: 15px;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--cyan);
+  text-decoration: none;
 }
 
-.timeline {
-    border-left: 2px solid #3b82f6;
-    padding-left: 25px;
+.documents {
+  text-align: center;
+  background: #0d1d34;
+  border-radius: 18px;
+  padding: 35px;
 }
 
-.timeline-item {
-    margin-bottom: 30px;
-}
-
-.timeline-item h3 {
-    color: #93c5fd;
-}
-
-.timeline-item p {
-    color: #cbd5e1;
+.documents .buttons {
+  justify-content: center;
 }
 
 .contact {
-    text-align: center;
-    background: #111827;
-}
-
-.contact p {
-    color: #cbd5e1;
-    margin-bottom: 20px;
+  text-align: center;
 }
 
 footer {
-    text-align: center;
-    padding: 25px;
-    color: #94a3b8;
-    border-top: 1px solid #263244;
+  text-align: center;
+  padding: 25px;
+  background: #06101f;
+  color: #94a3b8;
 }
 
 @media(max-width: 700px) {
-    nav {
-        flex-direction: column;
-        gap: 12px;
-    }
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    nav a {
-        margin: 0 7px;
-        font-size: 12px;
-    }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 
-    .hero {
-        min-height: 75vh;
-        padding: 55px 7%;
-    }
+  section {
+    padding: 65px 6%;
+  }
 
-    section {
-        padding: 60px 7%;
-    }
-
-    .section-title {
-        font-size: 29px;
-    }
+  .hero {
+    min-height: 75vh;
+  }
 }
 </style>
 </head>
@@ -248,243 +251,220 @@ footer {
 <body>
 
 <nav>
-    <div class="logo">Sandeep.</div>
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <div class="logo">Sandeep.</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#resume">Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <div class="tag">WELCOME TO MY PORTFOLIO</div>
+<section class="hero" id="home">
+  <div class="tag">WELCOME TO MY PORTFOLIO</div>
 
-        <h1>Hi, I'm Sandeep Upadhyay.</h1>
+  <h1>Hi, I'm <span>Sandeep<br>Upadhyay.</span></h1>
 
-        <h2>Data Science | Machine Learning | Computer Vision | IoT</h2>
+  <h2>Data Science | Machine Learning | Computer Vision | IoT</h2>
 
-        <p>
-            M.Tech student at IIT Kharagpur with a background in
-            Agricultural Engineering and an interest in Data Science,
-            Artificial Intelligence, Computer Vision and intelligent
-            engineering systems.
-        </p>
+  <p>
+    M.Tech student at IIT Kharagpur with a background in
+    Agricultural Engineering and an interest in Data Science,
+    Artificial Intelligence, Computer Vision and intelligent systems.
+    I enjoy solving real-world problems using technology and data.
+  </p>
 
-        <div class="buttons">
-            <a href="#projects" class="btn">Explore My Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-            <a href="resume.pdf" class="btn btn-outline" target="_blank">
-                My Resume
-            </a>
-        </div>
-    </div>
-</header>
+  <div class="buttons">
+    <a href="#projects" class="btn">Explore My Projects</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <a href="resume.pdf" target="_blank" class="btn btn-outline">My Resume</a>
+  </div>
+</section>
 
 <section id="about">
-    <h2 class="section-title">About <span>Me</span></h2>
+  <h2 class="section-title">About Me</h2>
+  <p class="section-subtitle">A little introduction</p>
 
-    <p class="about-text">
-        I am Sandeep Upadhyay, currently pursuing M.Tech in
-        Aquacultural Engineering at the Indian Institute of Technology
-        Kharagpur. I completed my B.Tech in Agricultural Engineering.
+  <p class="about-text">
+    I am Sandeep Upadhyay, currently pursuing M.Tech in
+    Aquacultural Engineering at IIT Kharagpur, with a B.Tech
+    background in Agricultural Engineering.
 
-        My interests include Data Science, Machine Learning,
-        Deep Learning, Computer Vision, Internet of Things and
-        research-oriented engineering applications.
+    My interests include Machine Learning, Data Science,
+    Computer Vision, Python programming and IoT-based systems.
 
-        I enjoy solving practical problems by combining programming,
-        data analysis, experimental research and technology.
-    </p>
+    I am also working on research involving computer vision
+    and mathematical modeling of fish swimming locomotion.
+  </p>
 </section>
 
 <section id="skills">
-    <h2 class="section-title">Technical <span>Skills</span></h2>
+  <h2 class="section-title">Technical Skills</h2>
+  <p class="section-subtitle">Tools and technologies I work with</p>
 
-    <div class="grid">
-        <div class="card">
-            <h3>Programming</h3>
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">SQL</span>
-                <span class="skill">MySQL</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Data Science</h3>
-            <div class="skills">
-                <span class="skill">Pandas</span>
-                <span class="skill">NumPy</span>
-                <span class="skill">Data Analysis</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Machine Learning</h3>
-            <div class="skills">
-                <span class="skill">Random Forest</span>
-                <span class="skill">Linear Regression</span>
-                <span class="skill">SVR</span>
-                <span class="skill">GBM</span>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Computer Vision & IoT</h3>
-            <div class="skills">
-                <span class="skill">OpenCV</span>
-                <span class="skill">YOLO</span>
-                <span class="skill">ESP32</span>
-                <span class="skill">Raspberry Pi</span>
-            </div>
-        </div>
-    </div>
+  <div class="skills">
+    <span class="skill">Python</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NumPy</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Deep Learning</span>
+    <span class="skill">Computer Vision</span>
+    <span class="skill">OpenCV</span>
+    <span class="skill">YOLOv8</span>
+    <span class="skill">Data Analysis</span>
+    <span class="skill">IoT</span>
+    <span class="skill">ESP32</span>
+    <span class="skill">Raspberry Pi</span>
+    <span class="skill">GitHub</span>
+  </div>
 </section>
 
 <section id="projects">
-    <h2 class="section-title">My <span>Projects</span></h2>
+  <h2 class="section-title">My Projects</h2>
+  <p class="section-subtitle">Learning through practical applications</p>
 
-    <div class="grid">
+  <div class="grid">
 
-        <div class="card">
-            <h3>Fish Locomotion Analysis</h3>
-            <p>
-                Computer-vision-based analysis of Nile Tilapia swimming
-                motion, including body midline extraction, tail-beat
-                frequency, lateral amplitude and body curvature.
-            </p>
-            <a href="#research" class="project-link">View Research →</a>
-        </div>
-
-        <div class="card">
-            <h3>Autonomous Fish Feeder</h3>
-            <p>
-                Developed an automated fish feeding concept using
-                microcontroller-based control and electronic components
-                for aquaculture applications.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>IoT-Based Aquaculture Monitoring</h3>
-            <p>
-                Exploring sensor-based monitoring of water quality
-                parameters such as pH, dissolved oxygen, temperature
-                and TDS.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Runoff Estimation</h3>
-            <p>
-                Estimated runoff in the GKVK Dryland Micro Watershed
-                using the NRCS Curve Number Method as a B.Tech
-                final-year project.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Facebook bAbI Chatbot</h3>
-            <p>
-                NLP-based chatbot project focused on question answering
-                using the bAbI task framework.
-            </p>
-        </div>
-
+    <div class="card">
+      <h3>Fish Locomotion Analysis</h3>
+      <p>
+        Developing a computer vision workflow to track
+        Nile Tilapia body keypoints and analyze swimming
+        kinematics using video data.
+      </p>
+      <a class="project-link" href="#research">Research Details →</a>
     </div>
+
+    <div class="card">
+      <h3>Fish Pose Estimation</h3>
+      <p>
+        Working with YOLOv8 pose estimation for fish
+        body landmark detection and tracking.
+      </p>
+      <a class="project-link"
+         href="https://github.com/sandeep520-beep"
+         target="_blank">GitHub Profile →</a>
+    </div>
+
+    <div class="card">
+      <h3>Property Price Prediction</h3>
+      <p>
+        Machine learning project involving property
+        price prediction and analytical recommendations.
+      </p>
+      <a class="project-link"
+         href="https://github.com/sandeep520-beep"
+         target="_blank">View GitHub →</a>
+    </div>
+
+    <div class="card">
+      <h3>NLP Chatbot</h3>
+      <p>
+        A question-answering chatbot project inspired
+        by the Facebook bAbI dataset.
+      </p>
+      <a class="project-link"
+         href="https://github.com/sandeep520-beep"
+         target="_blank">View GitHub →</a>
+    </div>
+
+  </div>
 </section>
 
 <section id="research">
-    <h2 class="section-title">Research <span>Work</span></h2>
+  <h2 class="section-title">Research & Interests</h2>
+  <p class="section-subtitle">My academic direction</p>
 
-    <div class="card">
-        <h3>
-            Experimental Characterization and Mathematical Modeling
-            of Carangiform Locomotion in Nile Tilapia
-        </h3>
-
-        <p>
-            My M.Tech research focuses on understanding fish swimming
-            kinematics through video-based motion analysis.
-        </p>
-
-        <br>
-
-        <p><strong>Research focus:</strong></p>
-
-        <ul style="margin-left:22px;color:#cbd5e1;">
-            <li>Fish body midline reconstruction</li>
-            <li>Caudal-fin movement analysis</li>
-            <li>Tail-beat frequency and lateral amplitude</li>
-            <li>Wavelength and phase propagation</li>
-            <li>Body curvature and swimming kinematics</li>
-            <li>Computer vision-based motion tracking</li>
-        </ul>
-    </div>
+  <div class="card">
+    <h3>Experimental Characterization and Mathematical Modeling of Carangiform Locomotion in Nile Tilapia</h3>
+    <p>
+      My research focuses on extracting fish body midline
+      and caudal-fin motion from swimming videos and
+      quantifying swimming parameters such as tail-beat
+      frequency, lateral amplitude, body curvature,
+      wavelength and wave propagation.
+    </p>
+  </div>
 </section>
 
-<section id="experience">
-    <h2 class="section-title">Experience & <span>Leadership</span></h2>
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <p class="section-subtitle">Academic background</p>
 
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <h3>General Secretary – Technology</h3>
-            <p>Atal Bihari Vajpayee Hall of Residence, IIT Kharagpur</p>
-            <p>
-                Coordinated technology initiatives and student
-                participation in hall activities.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>RAWE Training</h3>
-            <p>Mudigere, Karnataka</p>
-            <p>
-                Participated in farmer surveys, Participatory Rural
-                Appraisal, technology dissemination and rural
-                agricultural activities. Led a team of 27 students.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Technical Training</h3>
-            <p>SRFMTTI and Biodiesel Production</p>
-            <p>
-                Completed technical training in agricultural
-                machinery and biodiesel production.
-            </p>
-        </div>
-
+  <div class="grid">
+    <div class="card">
+      <h3>M.Tech</h3>
+      <p>Aquacultural Engineering</p>
+      <p>Indian Institute of Technology Kharagpur</p>
     </div>
+
+    <div class="card">
+      <h3>B.Tech</h3>
+      <p>Agricultural Engineering</p>
+      <p>Academic foundation in engineering and technology.</p>
+    </div>
+  </div>
+</section>
+
+<section id="resume">
+  <h2 class="section-title">My Resume</h2>
+  <p class="section-subtitle">Explore my professional documents</p>
+
+  <div class="documents">
+    <h3>Professional Documents</h3>
+
+    <div class="buttons">
+      <a href="resume.pdf" target="_blank" class="btn">
+        Main CV
+      </a>
+
+      <a href="resume_academic.pdf" target="_blank"
+         class="btn btn-outline">
+        Academic CV
+      </a>
+
+      <a href="resume_academic2.pdf" target="_blank"
+         class="btn btn-outline">
+        Additional CV
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="contact">
-    <h2 class="section-title">Let's <span>Connect</span></h2>
+  <h2 class="section-title">Let's Connect</h2>
+  <p class="section-subtitle">
+    Open to research, internship and collaboration opportunities.
+  </p>
 
-    <p>
-        Interested in Data Science, Machine Learning,
-        research and collaborative opportunities.
-    </p>
+  <div class="buttons" style="justify-content:center">
 
-    <div class="buttons" style="justify-content:center;">
-        <a href="https://github.com/sandeep520-beep"
-           class="btn" target="_blank">GitHub</a>
+    <a href="https://github.com/sandeep520-beep"
+       target="_blank" class="btn">
+       GitHub
+    </a>
 
-        <a href="https://www.linkedin.com/"
-           class="btn btn-outline" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/"
+       target="_blank" class="btn btn-outline">
+       LinkedIn
+    </a>
 
-        <a href="mailto:YOUR_EMAIL@gmail.com"
-           class="btn btn-outline">Email Me</a>
-    </div>
+    <a href="mailto:YOUR_EMAIL@gmail.com"
+       class="btn btn-outline">
+       Email Me
+    </a>
+
+  </div>
 </section>
 
 <footer>
-    © 2026 Sandeep Upadhyay | Personal Portfolio
+  <p>© 2026 Sandeep Upadhyay | Personal Portfolio</p>
+  <p>Designed with passion for technology and innovation.</p>
 </footer>
 
 </body>
 </html>
+
