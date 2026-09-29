@@ -1,142 +1,1198 @@
 
-/* =================================
-   ABOUT ME SECTION
-================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sandeep Upadhyay | AI & Data Science Portfolio</title>
+
+<meta name="description" content="Portfolio of Sandeep Upadhyay, M.Tech student at IIT Kharagpur, interested in Data Science, Machine Learning, Computer Vision and Intelligent Systems.">
+
+<style>
+
+/* ========================================
+   1. GLOBAL SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #081426;
+    --bg-light: #10213a;
+    --card: #132944;
+    --cyan: #22d3ee;
+    --blue: #3b82f6;
+    --white: #e5f3ff;
+    --text: #b7c8dc;
+    --border: rgba(34, 211, 238, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 100px 8%;
+    scroll-margin-top: 80px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--cyan);
+}
+
+.section-subtitle {
+    color: var(--cyan);
+    margin-bottom: 45px;
+    font-size: 15px;
+}
+
+.highlight {
+    color: var(--cyan);
+}
+
+/* ========================================
+   2. NAVIGATION BAR
+======================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 20, 38, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1300px;
+    margin: auto;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--cyan);
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cyan);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    background: none;
+    color: var(--cyan);
+    border: none;
+    cursor: pointer;
+}
+
+/* ========================================
+   3. HOME / HERO SECTION
+======================================== */
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(34, 211, 238, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #081426, #102b4d);
+}
+
+.hero-content {
+    max-width: 900px;
+    padding-top: 50px;
+}
+
+.welcome {
+    color: var(--cyan);
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1.12;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: var(--cyan);
+}
+
+.hero-role {
+    font-size: clamp(17px, 2.5vw, 24px);
+    font-weight: 700;
+    color: #d6e9ff;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    color: var(--text);
+    font-size: 17px;
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    padding: 13px 25px;
+    border-radius: 9px;
+    border: 1px solid var(--cyan);
+    display: inline-block;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--cyan);
+    color: #061426;
+}
+
+.btn-outline {
+    color: var(--cyan);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(34, 211, 238, 0.2);
+}
+
+/* ========================================
+   4. ABOUT SECTION
+======================================== */
 
 #about {
-  max-width: 1100px;
-  margin: auto;
-  padding: 90px 30px;
+    background: #0b1a2e;
 }
-
-/* Section Heading */
-
-#about .section-title {
-  font-size: 36px;
-  font-weight: 800;
-  color: #e5f3ff;
-  margin-bottom: 10px;
-}
-
-/* Subtitle */
-
-#about .section-subtitle {
-  color: #22d3ee;
-  font-size: 15px;
-  margin-bottom: 35px;
-}
-
-/* Main Container */
 
 .about-container {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 45px;
+    align-items: start;
 }
-
-/* About Text */
 
 .about-text {
-  max-width: 900px;
-  color: #cbd5e1;
-  font-size: 17px;
-  line-height: 1.9;
+    color: var(--text);
+    font-size: 16px;
 }
-
-/* Paragraph Spacing */
 
 .about-text p {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-
-/* Highlight Name and Keywords */
-
-.about-text strong {
-  color: #22d3ee;
-  font-weight: 700;
-}
-
-/* About Cards Layout */
 
 .about-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
-
-/* Individual Cards */
 
 .about-card {
-  background: rgba(30, 50, 75, 0.55);
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  border-radius: 16px;
-  padding: 28px 22px;
-  transition: all 0.3s ease;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 23px;
+    transition: 0.3s;
 }
-
-/* Card Hover Effect */
 
 .about-card:hover {
-  transform: translateY(-7px);
-  border-color: #22d3ee;
-  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.12);
+    transform: translateY(-6px);
+    border-color: var(--cyan);
 }
-
-/* Card Icon */
 
 .about-icon {
-  font-size: 32px;
-  margin-bottom: 15px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
-
-/* Card Heading */
 
 .about-card h3 {
-  color: #e5f3ff;
-  font-size: 20px;
-  margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 7px;
 }
-
-/* Card Main Text */
 
 .about-card p {
-  color: #22d3ee;
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 8px;
+    color: var(--cyan);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-/* Card Description */
+/* ========================================
+   5. SKILLS SECTION
+======================================== */
 
-.about-card span {
-  color: #aebed0;
-  font-size: 13px;
-  line-height: 1.7;
+#skills {
+    background: var(--bg);
 }
 
-/* Mobile Responsive Design */
-
-@media (max-width: 768px) {
-
-  #about {
-    padding: 60px 20px;
-  }
-
-  #about .section-title {
-    font-size: 29px;
-  }
-
-  .about-text {
-    font-size: 15px;
-  }
-
-  .about-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .about-card {
-    padding: 23px;
-  }
-
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
+
+.skill-card {
+    background: var(--card);
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--cyan);
+}
+
+.skill-card h3 {
+    color: var(--cyan);
+    margin-bottom: 17px;
+    font-size: 19px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill-tag {
+    background: rgba(34, 211, 238, 0.08);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+/* ========================================
+   6. PROJECTS SECTION
+======================================== */
+
+#projects {
+    background: #0b1a2e;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--cyan);
+    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.08);
+}
+
+.project-top {
+    height: 150px;
+    background: linear-gradient(135deg, #12385c, #07566d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    font-size: 12px;
+    color: var(--cyan);
+    background: rgba(34, 211, 238, 0.08);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.project-link {
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ========================================
+   7. RESEARCH SECTION
+======================================== */
+
+#research {
+    background: var(--bg);
+}
+
+.research-card {
+    background: linear-gradient(135deg, #132944, #102b4d);
+    border: 1px solid var(--border);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.research-label {
+    display: inline-block;
+    color: var(--cyan);
+    background: rgba(34, 211, 238, 0.1);
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.research-card h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.research-card p {
+    color: var(--text);
+    margin-bottom: 20px;
+}
+
+.research-list {
+    padding-left: 22px;
+    color: var(--text);
+}
+
+.research-list li {
+    margin-bottom: 9px;
+}
+
+/* ========================================
+   8. EDUCATION SECTION
+======================================== */
+
+#education {
+    background: #0b1a2e;
+}
+
+.timeline {
+    border-left: 2px solid var(--cyan);
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    background: var(--cyan);
+    border-radius: 50%;
+}
+
+.timeline-item h3 {
+    color: var(--cyan);
+    font-size: 19px;
+}
+
+.timeline-item p {
+    color: var(--text);
+    margin-top: 7px;
+}
+
+/* ========================================
+   9. RESUME SECTION
+======================================== */
+
+#resume {
+    background: var(--bg);
+    text-align: center;
+}
+
+.resume-box {
+    max-width: 800px;
+    margin: auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 45px 25px;
+    border-radius: 20px;
+}
+
+.resume-box p {
+    color: var(--text);
+    margin: 15px 0 25px;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ========================================
+   10. CONTACT SECTION
+======================================== */
+
+#contact {
+    background: #0b1a2e;
+    text-align: center;
+}
+
+.contact-description {
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-link {
+    padding: 13px 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--cyan);
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    background: var(--cyan);
+    color: #081426;
+}
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+footer {
+    background: #06101e;
+    text-align: center;
+    padding: 25px;
+    color: #91a6bd;
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+}
+
+footer span {
+    color: var(--cyan);
+}
+
+/* ========================================
+   12. ANIMATIONS
+======================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeUp 1s ease;
+}
+
+/* ========================================
+   13. MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #0b1a2e;
+        flex-direction: column;
+        padding: 25px 8%;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .research-card {
+        padding: 25px;
+    }
+
+    .research-card h3 {
+        font-size: 21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================================
+     NAVIGATION
+======================================== -->
+
+<header>
+<nav class="navbar">
+
+<a href="#home" class="logo">Sandeep.</a>
+
+<button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
+☰
+</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- ========================================
+     HOME
+======================================== -->
+
+<section id="home">
+
+<div class="container hero-content">
+
+<p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+<h1 class="hero-title">
+Hi, I'm <span>Sandeep</span><br>
+Upadhyay<span>.</span>
+</h1>
+
+<p class="hero-role">
+Data Science | Machine Learning | Computer Vision | IoT
+</p>
+
+<p class="hero-description">
+M.Tech student at IIT Kharagpur with a background in
+Agricultural Engineering and a strong interest in Data Science,
+Artificial Intelligence, Computer Vision, and intelligent systems.
+I enjoy solving real-world problems using technology,
+programming, and data-driven approaches.
+</p>
+
+<div class="hero-buttons">
+<a href="#projects" class="btn btn-primary">Explore My Projects</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
+<a href="resume.pdf" target="_blank" class="btn btn-outline">My Resume</a>
+</div>
+
+</div>
+</section>
+
+<!-- ========================================
+     ABOUT
+======================================== -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">About <span>Me</span></h2>
+
+<p class="section-subtitle">A little introduction</p>
+
+<div class="about-container">
+
+<div class="about-text">
+
+<p>
+Hello! I'm <strong class="highlight">Sandeep Upadhyay</strong>,
+currently pursuing M.Tech in Aquacultural Engineering at
+the <strong class="highlight">Indian Institute of Technology Kharagpur</strong>,
+with a B.Tech background in Agricultural Engineering.
+</p>
+
+<p>
+My interests lie in Data Science, Machine Learning,
+Artificial Intelligence, Computer Vision, Python Programming,
+and IoT-based intelligent systems.
+</p>
+
+<p>
+My current academic research focuses on computer-vision-based
+analysis and mathematical modeling of fish swimming locomotion,
+combining experimental methods with computational techniques.
+</p>
+
+<p>
+I enjoy exploring innovative technologies, developing
+intelligent solutions, and applying computational methods
+to real-world engineering and research challenges.
+</p>
+
+</div>
+
+<div class="about-cards">
+
+<div class="about-card">
+<div class="about-icon">🎓</div>
+<h3>Education</h3>
+<p>IIT Kharagpur</p>
+</div>
+
+<div class="about-card">
+<div class="about-icon">🤖</div>
+<h3>Interests</h3>
+<p>AI & Data Science</p>
+</div>
+
+<div class="about-card">
+<div class="about-icon">💻</div>
+<h3>Technology</h3>
+<p>Python & Computer Vision</p>
+</div>
+
+<div class="about-card">
+<div class="about-icon">🐟</div>
+<h3>Research</h3>
+<p>Fish Locomotion</p>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     SKILLS
+======================================== -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">My <span>Skills</span></h2>
+<p class="section-subtitle">Technologies and tools I work with</p>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>🐍 Programming</h3>
+<div class="skill-list">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">SQL</span>
+<span class="skill-tag">MySQL</span>
+<span class="skill-tag">Pandas</span>
+<span class="skill-tag">NumPy</span>
+</div>
+</div>
+
+<div class="skill-card">
+<h3>🤖 Machine Learning</h3>
+<div class="skill-list">
+<span class="skill-tag">Regression</span>
+<span class="skill-tag">Random Forest</span>
+<span class="skill-tag">Decision Trees</span>
+<span class="skill-tag">Model Evaluation</span>
+<span class="skill-tag">Scikit-learn</span>
+</div>
+</div>
+
+<div class="skill-card">
+<h3>👁️ Computer Vision</h3>
+<div class="skill-list">
+<span class="skill-tag">OpenCV</span>
+<span class="skill-tag">YOLOv8</span>
+<span class="skill-tag">Image Processing</span>
+<span class="skill-tag">Object Tracking</span>
+</div>
+</div>
+
+<div class="skill-card">
+<h3>📡 IoT & Hardware</h3>
+<div class="skill-list">
+<span class="skill-tag">ESP32</span>
+<span class="skill-tag">Raspberry Pi</span>
+<span class="skill-tag">Sensors</span>
+<span class="skill-tag">IoT Systems</span>
+</div>
+</div>
+
+<div class="skill-card">
+<h3>📊 Data Analysis</h3>
+<div class="skill-list">
+<span class="skill-tag">Data Cleaning</span>
+<span class="skill-tag">Exploratory Data Analysis</span>
+<span class="skill-tag">Visualization</span>
+<span class="skill-tag">Matplotlib</span>
+</div>
+</div>
+
+<div class="skill-card">
+<h3>🛠️ Tools</h3>
+<div class="skill-list">
+<span class="skill-tag">GitHub</span>
+<span class="skill-tag">Jupyter Notebook</span>
+<span class="skill-tag">VS Code</span>
+<span class="skill-tag">Google Colab</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     PROJECTS
+======================================== -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">My <span>Projects</span></h2>
+<p class="section-subtitle">Engineering, AI and technology projects</p>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<div class="project-top">🐟</div>
+
+<div class="project-content">
+
+<h3>Fish Locomotion Analysis Using Computer Vision</h3>
+
+<p>
+Developing a computer-vision-based workflow to extract
+fish body midline and caudal-fin motion from swimming videos.
+The work focuses on analyzing swimming kinematics and
+mathematical modeling of Nile Tilapia locomotion.
+</p>
+
+<div class="project-tags">
+<span>Python</span>
+<span>OpenCV</span>
+<span>YOLOv8</span>
+<span>Computer Vision</span>
+</div>
+
+<a href="#research" class="project-link">View Research →</a>
+
+</div>
+</div>
+
+<div class="project-card">
+
+<div class="project-top">🤖</div>
+
+<div class="project-content">
+
+<h3>Autonomous Fish Feeder</h3>
+
+<p>
+An automated fish-feeding project using embedded
+hardware and control logic to support scheduled
+fish feeding.
+</p>
+
+<div class="project-tags">
+<span>ESP32</span>
+<span>IoT</span>
+<span>Automation</span>
+<span>Embedded Systems</span>
+</div>
+
+<a href="#contact" class="project-link">Know More →</a>
+
+</div>
+</div>
+
+<div class="project-card">
+
+<div class="project-top">🌱</div>
+
+<div class="project-content">
+
+<h3>Runoff Estimation Using NRCS Curve Number Method</h3>
+
+<p>
+Final-year B.Tech project focused on runoff estimation
+in the GKVK Dryland Micro Watershed using the
+NRCS Curve Number method.
+</p>
+
+<div class="project-tags">
+<span>Hydrology</span>
+<span>NRCS-CN</span>
+<span>Watershed</span>
+<span>Water Resources</span>
+</div>
+
+<a href="#contact" class="project-link">Know More →</a>
+
+</div>
+</div>
+
+<div class="project-card">
+
+<div class="project-top">📡</div>
+
+<div class="project-content">
+
+<h3>IoT-Based Aquaculture Monitoring</h3>
+
+<p>
+Exploring an intelligent monitoring framework using
+water-quality parameters and data-driven techniques
+for aquaculture applications.
+</p>
+
+<div class="project-tags">
+<span>IoT</span>
+<span>Water Quality</span>
+<span>Machine Learning</span>
+<span>Data Analysis</span>
+</div>
+
+<a href="#contact" class="project-link">Know More →</a>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     RESEARCH
+======================================== -->
+
+<section id="research">
+
+<div class="container">
+
+<h2 class="section-title">Research <span>Work</span></h2>
+<p class="section-subtitle">Current academic research</p>
+
+<div class="research-card">
+
+<span class="research-label">M.Tech Research · IIT Kharagpur</span>
+
+<h3>
+Experimental Characterization and Mathematical Modeling
+of Carangiform Locomotion in Nile Tilapia
+</h3>
+
+<p>
+My research investigates fish swimming locomotion using
+experimental observations, video analysis, and mathematical
+modeling.
+</p>
+
+<p>
+The project aims to develop a computer-vision-based
+workflow for reconstructing body midline and caudal-fin
+motion from swimming videos.
+</p>
+
+<strong class="highlight">Research Focus</strong>
+
+<ul class="research-list">
+<li>Fish body midline extraction and reconstruction</li>
+<li>Tail-beat frequency and lateral amplitude estimation</li>
+<li>Body curvature and wavelength analysis</li>
+<li>Phase propagation and swimming wave speed</li>
+<li>Computer vision-based kinematic characterization</li>
+<li>Mathematical modeling of fish locomotion</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     EDUCATION
+======================================== -->
+
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title">My <span>Education</span></h2>
+<p class="section-subtitle">Academic background</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Indian Institute of Technology Kharagpur</h3>
+
+<p><strong>M.Tech in Aquacultural Engineering</strong></p>
+
+<p>
+Current postgraduate studies and research in fish
+locomotion, computational analysis, and engineering.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>B.Tech in Agricultural Engineering</h3>
+
+<p>
+Undergraduate background in agricultural engineering,
+water resources, soil and water conservation,
+irrigation, and engineering applications.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     RESUME
+======================================== -->
+
+<section id="resume">
+
+<div class="container">
+
+<div class="resume-box">
+
+<h2 class="section-title">My <span>Resume</span></h2>
+
+<p>
+Explore my academic background, technical skills,
+research interests, projects, and experience.
+</p>
+
+<div class="resume-buttons">
+
+<a href="resume.pdf" target="_blank" class="btn btn-primary">
+View Resume
+</a>
+
+<a href="resume.pdf" download class="btn btn-outline">
+Download Resume
+</a>
+
+<a href="resume_academic.pdf" target="_blank" class="btn btn-outline">
+Academic CV
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     CONTACT
+======================================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Get In <span>Touch</span></h2>
+
+<p class="contact-description">
+I'm open to discussions about research, technology,
+Data Science, Machine Learning, and collaboration.
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:YOUR_EMAIL@gmail.com" class="contact-link">
+✉ Email Me
+</a>
+
+<a href="https://github.com/sandeep520-beep"
+target="_blank" class="contact-link">
+⌘ GitHub
+</a>
+
+<a href="https://www.linkedin.com/"
+target="_blank" class="contact-link">
+in LinkedIn
+</a>
+
+</div>
+</div>
+</section>
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+<p>
+Designed and developed by
+<span>Sandeep Upadhyay</span>
+</p>
+
+<p>© 2026 | Personal Portfolio</p>
+
+</footer>
+
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function() {
+    navLinks.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+    });
+});
+
+</script>
+
+</body>
+</html>
