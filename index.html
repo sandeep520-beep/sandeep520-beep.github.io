@@ -1,13 +1,32 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sandeep Upadhyay | Portfolio</title>
 
+<meta name="description" content="Sandeep Upadhyay - M.Tech student at IIT Kharagpur, interested in Data Science, Machine Learning, Computer Vision and IoT.">
+
 <style>
+
+/* ==============================
+   1. GLOBAL SETTINGS
+================================ */
+
+:root {
+  --blue: #38bdf8;
+  --cyan: #22d3ee;
+  --purple: #818cf8;
+  --background: #07111f;
+  --card: #10233b;
+  --text: #e5edf8;
+  --muted: #a9b9ce;
+  --border: #263d5b;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,35 +34,54 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #081426;
-  color: #e5edf8;
-  line-height: 1.7;
+html {
+  scroll-padding-top: 90px;
 }
 
-:root {
-  --blue: #38bdf8;
-  --cyan: #22d3ee;
-  --card: #12233c;
-  --muted: #a9b9ce;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(34, 211, 238, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #07111f, #0b1b32 60%, #081426);
+
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* ==============================
+   2. NAVIGATION
+================================ */
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background: #0b1930;
+
+  padding: 18px 8%;
+
+  background: rgba(8, 20, 38, 0.90);
+  backdrop-filter: blur(15px);
+
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid #20334d;
+
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
 }
 
 .logo {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 800;
+  letter-spacing: -1px;
   color: var(--blue);
 }
 
@@ -55,26 +93,55 @@ nav ul {
 
 nav a {
   color: #dbeafe;
-  text-decoration: none;
   font-size: 14px;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: var(--cyan);
 }
 
+/* ==============================
+   3. GENERAL SECTIONS
+================================ */
+
 section {
-  padding: 90px 9%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 100px 9%;
 }
 
+.section-title {
+  font-size: clamp(30px, 5vw, 42px);
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.section-subtitle {
+  color: var(--blue);
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+/* ==============================
+   4. HERO SECTION
+================================ */
+
 .hero {
-  min-height: 85vh;
+  min-height: 88vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   background:
-    radial-gradient(circle at 85% 20%, #164e6380, transparent 35%),
-    #081426;
+    radial-gradient(
+      circle at 85% 35%,
+      rgba(34, 211, 238, 0.12),
+      transparent 32%
+    ),
+    transparent;
 }
 
 .tag {
@@ -85,27 +152,42 @@ section {
 }
 
 .hero h1 {
-  font-size: clamp(42px, 8vw, 76px);
-  line-height: 1.15;
-  margin: 20px 0;
-  color: #f8fafc;
+  font-size: clamp(45px, 8vw, 82px);
+  line-height: 1.12;
+  margin: 22px 0;
+  font-weight: 800;
+  letter-spacing: -3px;
 }
 
 .hero h1 span {
-  color: var(--blue);
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #22d3ee,
+    #818cf8
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero h2 {
   color: #a5d8ff;
-  font-size: 22px;
+  font-size: clamp(17px, 2.5vw, 23px);
   margin-bottom: 20px;
 }
 
 .hero p {
-  max-width: 720px;
+  max-width: 750px;
   color: var(--muted);
   font-size: 17px;
+  line-height: 1.9;
 }
+
+/* ==============================
+   5. BUTTONS
+================================ */
 
 .buttons {
   display: flex;
@@ -116,19 +198,23 @@ section {
 
 .btn {
   display: inline-block;
-  padding: 12px 23px;
-  border-radius: 8px;
+  padding: 13px 25px;
+  border-radius: 10px;
+
   background: #0284c7;
   color: white;
-  text-decoration: none;
+
   font-weight: 600;
-  border: 1px solid #38bdf8;
-  transition: 0.3s;
+  border: 1px solid var(--blue);
+
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   background: #0369a1;
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.20);
 }
 
 .btn-outline {
@@ -136,179 +222,413 @@ section {
   color: var(--blue);
 }
 
-.section-title {
-  font-size: 36px;
-  color: white;
-  margin-bottom: 12px;
+.btn-outline:hover {
+  background: #123654;
 }
 
-.section-subtitle {
-  color: var(--blue);
-  margin-bottom: 35px;
-}
+/* ==============================
+   6. ABOUT SECTION
+================================ */
 
 .about-text {
-  max-width: 850px;
+  max-width: 900px;
   color: var(--muted);
   font-size: 17px;
+  line-height: 2;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 22px;
+/* ==============================
+   7. SKILLS
+================================ */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
 }
 
-.card {
-  background: var(--card);
-  padding: 25px;
-  border: 1px solid #263d5b;
-  border-radius: 14px;
+.skill {
+  padding: 10px 19px;
+  border-radius: 30px;
+
+  background: #153451;
+  border: 1px solid #27658a;
+
+  color: #a5e5ff;
+  font-size: 14px;
+
   transition: 0.3s;
 }
 
+.skill:hover {
+  background: #075985;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   8. GRID AND CARDS
+================================ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  );
+
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(18, 35, 60, 0.95),
+    rgba(10, 28, 49, 0.95)
+  );
+
+  padding: 30px;
+
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 18px;
+
+  transition: all 0.35s ease;
+}
+
 .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--blue);
+  transform: translateY(-8px);
+  border-color: var(--cyan);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(34, 211, 238, 0.08);
 }
 
 .card h3 {
   color: var(--blue);
-  margin-bottom: 12px;
+  font-size: 20px;
+  margin-bottom: 13px;
 }
 
 .card p {
   color: var(--muted);
   font-size: 15px;
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.skill {
-  padding: 10px 17px;
-  border-radius: 7px;
-  background: #153451;
-  border: 1px solid #27658a;
-  color: #a5e5ff;
+  line-height: 1.8;
 }
 
 .project-link {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 20px;
   color: var(--cyan);
-  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
 }
+
+.project-link:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+/* ==============================
+   9. RESEARCH
+================================ */
+
+.research-card {
+  border-left: 4px solid var(--cyan);
+  background: linear-gradient(
+    135deg,
+    #102b49,
+    #0d1d34
+  );
+}
+
+/* ==============================
+   10. EDUCATION
+================================ */
+
+.education-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(34, 211, 238, 0.06);
+  right: -30px;
+  bottom: -30px;
+}
+
+/* ==============================
+   11. RESUME
+================================ */
 
 .documents {
   text-align: center;
-  background: #0d1d34;
-  border-radius: 18px;
-  padding: 35px;
+
+  background: linear-gradient(
+    135deg,
+    #102b49,
+    #0d1d34
+  );
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 20px;
+  padding: 45px 25px;
+}
+
+.documents h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.documents p {
+  color: var(--muted);
 }
 
 .documents .buttons {
   justify-content: center;
 }
 
+/* ==============================
+   12. CONTACT
+================================ */
+
 .contact {
   text-align: center;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #06101f;
-  color: #94a3b8;
+.contact p {
+  color: var(--muted);
 }
 
+.contact .buttons {
+  justify-content: center;
+}
+
+/* ==============================
+   13. FOOTER
+================================ */
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+
+  background: #06101f;
+  border-top: 1px solid var(--border);
+
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ==============================
+   14. RESPONSIVE DESIGN
+================================ */
+
 @media(max-width: 700px) {
+
   nav {
     flex-direction: column;
     gap: 12px;
+    padding: 15px 5%;
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 12px 18px;
+  }
+
+  nav a {
+    font-size: 13px;
   }
 
   section {
-    padding: 65px 6%;
+    padding: 70px 6%;
   }
 
   .hero {
     min-height: 75vh;
   }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 23px;
+  }
+
+  .documents {
+    padding: 30px 18px;
+  }
 }
+
+/* Accessibility */
+
+@media(prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- ==============================
+     NAVIGATION
+================================ -->
+
 <nav>
+
   <div class="logo">Sandeep.</div>
+
   <ul>
+    <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#research">Research</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
 </nav>
 
+<!-- ==============================
+     HERO SECTION
+================================ -->
+
 <section class="hero" id="home">
-  <div class="tag">WELCOME TO MY PORTFOLIO</div>
 
-  <h1>Hi, I'm <span>Sandeep<br>Upadhyay.</span></h1>
+  <div class="tag">
+    WELCOME TO MY PORTFOLIO
+  </div>
 
-  <h2>Data Science | Machine Learning | Computer Vision | IoT</h2>
+  <h1>
+    Hi, I'm <span>Sandeep<br>Upadhyay.</span>
+  </h1>
+
+  <h2>
+    Data Science | Machine Learning | Computer Vision | IoT
+  </h2>
 
   <p>
     M.Tech student at IIT Kharagpur with a background in
-    Agricultural Engineering and an interest in Data Science,
-    Artificial Intelligence, Computer Vision and intelligent systems.
-    I enjoy solving real-world problems using technology and data.
+    Agricultural Engineering and a strong interest in
+    Data Science, Artificial Intelligence, Computer Vision
+    and intelligent systems.
+
+    I enjoy solving real-world problems using technology,
+    programming and data-driven approaches.
   </p>
 
   <div class="buttons">
-    <a href="#projects" class="btn">Explore My Projects</a>
-    <a href="#contact" class="btn btn-outline">Contact Me</a>
-    <a href="resume.pdf" target="_blank" class="btn btn-outline">My Resume</a>
+
+    <a href="#projects" class="btn">
+      Explore My Projects
+    </a>
+
+    <a href="#contact" class="btn btn-outline">
+      Contact Me
+    </a>
+
+    <a href="resume.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-outline">
+      My Resume
+    </a>
+
   </div>
+
 </section>
 
+<!-- ==============================
+     ABOUT ME
+================================ -->
+
 <section id="about">
+
   <h2 class="section-title">About Me</h2>
-  <p class="section-subtitle">A little introduction</p>
+
+  <p class="section-subtitle">
+    A little introduction
+  </p>
 
   <p class="about-text">
+
     I am Sandeep Upadhyay, currently pursuing M.Tech in
-    Aquacultural Engineering at IIT Kharagpur, with a B.Tech
-    background in Agricultural Engineering.
+    Aquacultural Engineering at Indian Institute of
+    Technology Kharagpur, with a B.Tech background in
+    Agricultural Engineering.
+
+    <br><br>
 
     My interests include Machine Learning, Data Science,
     Computer Vision, Python programming and IoT-based systems.
 
-    I am also working on research involving computer vision
-    and mathematical modeling of fish swimming locomotion.
+    <br><br>
+
+    My current academic research focuses on computer
+    vision-based analysis and mathematical modeling of
+    fish swimming locomotion.
+
+    <br><br>
+
+    I am interested in applying computational methods
+    and intelligent technologies to practical engineering
+    and research problems.
+
   </p>
+
 </section>
 
+<!-- ==============================
+     TECHNICAL SKILLS
+================================ -->
+
 <section id="skills">
+
   <h2 class="section-title">Technical Skills</h2>
-  <p class="section-subtitle">Tools and technologies I work with</p>
+
+  <p class="section-subtitle">
+    Tools and technologies I work with
+  </p>
 
   <div class="skills">
+
     <span class="skill">Python</span>
     <span class="skill">SQL</span>
     <span class="skill">Pandas</span>
     <span class="skill">NumPy</span>
+    <span class="skill">Matplotlib</span>
     <span class="skill">Machine Learning</span>
     <span class="skill">Deep Learning</span>
     <span class="skill">Computer Vision</span>
@@ -319,152 +639,316 @@ footer {
     <span class="skill">ESP32</span>
     <span class="skill">Raspberry Pi</span>
     <span class="skill">GitHub</span>
+
   </div>
+
 </section>
+
+<!-- ==============================
+     PROJECTS
+================================ -->
 
 <section id="projects">
+
   <h2 class="section-title">My Projects</h2>
-  <p class="section-subtitle">Learning through practical applications</p>
+
+  <p class="section-subtitle">
+    Learning through practical applications
+  </p>
 
   <div class="grid">
 
     <div class="card">
+
       <h3>Fish Locomotion Analysis</h3>
+
       <p>
-        Developing a computer vision workflow to track
-        Nile Tilapia body keypoints and analyze swimming
-        kinematics using video data.
+        Developing a computer vision workflow to extract
+        Nile Tilapia body midline and caudal-fin motion
+        from swimming videos.
+
+        The study focuses on swimming kinematics such as
+        tail-beat frequency, lateral amplitude and
+        body curvature.
       </p>
-      <a class="project-link" href="#research">Research Details →</a>
+
+      <a class="project-link" href="#research">
+        Research Details →
+      </a>
+
     </div>
 
     <div class="card">
+
       <h3>Fish Pose Estimation</h3>
+
       <p>
-        Working with YOLOv8 pose estimation for fish
-        body landmark detection and tracking.
+        Working with YOLOv8 pose estimation to detect
+        fish body landmarks and analyze body posture
+        from video frames.
       </p>
+
       <a class="project-link"
          href="https://github.com/sandeep520-beep"
-         target="_blank">GitHub Profile →</a>
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub Profile →
+      </a>
+
     </div>
 
     <div class="card">
+
       <h3>Property Price Prediction</h3>
+
       <p>
         Machine learning project involving property
-        price prediction and analytical recommendations.
+        price prediction using data analysis and
+        predictive modeling techniques.
       </p>
+
       <a class="project-link"
          href="https://github.com/sandeep520-beep"
-         target="_blank">View GitHub →</a>
+         target="_blank"
+         rel="noopener noreferrer">
+        View GitHub →
+      </a>
+
     </div>
 
     <div class="card">
+
       <h3>NLP Chatbot</h3>
+
       <p>
         A question-answering chatbot project inspired
-        by the Facebook bAbI dataset.
+        by the Facebook bAbI dataset, exploring
+        natural language processing and reasoning.
       </p>
+
       <a class="project-link"
          href="https://github.com/sandeep520-beep"
-         target="_blank">View GitHub →</a>
+         target="_blank"
+         rel="noopener noreferrer">
+        View GitHub →
+      </a>
+
     </div>
 
   </div>
+
 </section>
+
+<!-- ==============================
+     RESEARCH
+================================ -->
 
 <section id="research">
-  <h2 class="section-title">Research & Interests</h2>
-  <p class="section-subtitle">My academic direction</p>
 
-  <div class="card">
-    <h3>Experimental Characterization and Mathematical Modeling of Carangiform Locomotion in Nile Tilapia</h3>
+  <h2 class="section-title">Research & Interests</h2>
+
+  <p class="section-subtitle">
+    My academic direction
+  </p>
+
+  <div class="card research-card">
+
+    <h3>
+      Experimental Characterization and Mathematical
+      Modeling of Carangiform Locomotion in Nile Tilapia
+    </h3>
+
     <p>
+
       My research focuses on extracting fish body midline
-      and caudal-fin motion from swimming videos and
-      quantifying swimming parameters such as tail-beat
-      frequency, lateral amplitude, body curvature,
-      wavelength and wave propagation.
+      and caudal-fin motion from swimming videos using
+      computer vision techniques.
+
+      <br><br>
+
+      The objective is to quantify swimming parameters
+      such as:
+
+      <br><br>
+
+      • Tail-beat frequency
+
+      <br>
+
+      • Lateral amplitude
+
+      <br>
+
+      • Body curvature
+
+      <br>
+
+      • Wavelength
+
+      <br>
+
+      • Phase propagation
+
+      <br>
+
+      • Wave speed
+
+      <br><br>
+
+      This work combines experimental observation,
+      computer vision and mathematical modeling to
+      understand fish swimming locomotion.
+
     </p>
+
   </div>
+
 </section>
+
+<!-- ==============================
+     EDUCATION
+================================ -->
 
 <section id="education">
+
   <h2 class="section-title">Education</h2>
-  <p class="section-subtitle">Academic background</p>
+
+  <p class="section-subtitle">
+    Academic background
+  </p>
 
   <div class="grid">
-    <div class="card">
+
+    <div class="card education-card">
+
       <h3>M.Tech</h3>
-      <p>Aquacultural Engineering</p>
-      <p>Indian Institute of Technology Kharagpur</p>
+
+      <p><strong>Aquacultural Engineering</strong></p>
+
+      <p>
+        Indian Institute of Technology Kharagpur
+      </p>
+
     </div>
 
-    <div class="card">
+    <div class="card education-card">
+
       <h3>B.Tech</h3>
-      <p>Agricultural Engineering</p>
-      <p>Academic foundation in engineering and technology.</p>
+
+      <p><strong>Agricultural Engineering</strong></p>
+
+      <p>
+        Academic foundation in engineering,
+        agricultural technology and applied sciences.
+      </p>
+
     </div>
+
   </div>
+
 </section>
+
+<!-- ==============================
+     RESUME
+================================ -->
 
 <section id="resume">
+
   <h2 class="section-title">My Resume</h2>
-  <p class="section-subtitle">Explore my professional documents</p>
+
+  <p class="section-subtitle">
+    Explore my professional documents
+  </p>
 
   <div class="documents">
+
     <h3>Professional Documents</h3>
 
+    <p>
+      Access my resume and academic profile below.
+    </p>
+
     <div class="buttons">
-      <a href="resume.pdf" target="_blank" class="btn">
-        Main CV
+
+      <a href="resume.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn">
+        Main CV ↗
       </a>
 
-      <a href="resume_academic.pdf" target="_blank"
+      <a href="resume_academic.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
          class="btn btn-outline">
-        Academic CV
+        Academic CV ↗
       </a>
 
-      <a href="resume_academic2.pdf" target="_blank"
+      <a href="resume_academic2.pdf"
+         target="_blank"
+         rel="noopener noreferrer"
          class="btn btn-outline">
-        Additional CV
+        Additional CV ↗
       </a>
+
     </div>
+
   </div>
+
 </section>
 
+<!-- ==============================
+     CONTACT
+================================ -->
+
 <section id="contact" class="contact">
+
   <h2 class="section-title">Let's Connect</h2>
+
   <p class="section-subtitle">
     Open to research, internship and collaboration opportunities.
   </p>
 
-  <div class="buttons" style="justify-content:center">
+  <div class="buttons">
 
     <a href="https://github.com/sandeep520-beep"
-       target="_blank" class="btn">
-       GitHub
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn">
+      GitHub ↗
     </a>
 
-    <a href="https://www.linkedin.com/"
-       target="_blank" class="btn btn-outline">
-       LinkedIn
+    <a href="YOUR_LINKEDIN_PROFILE_URL"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-outline">
+      LinkedIn ↗
     </a>
 
     <a href="mailto:YOUR_EMAIL@gmail.com"
        class="btn btn-outline">
-       Email Me
+      Email Me ✉
     </a>
 
   </div>
+
 </section>
 
+<!-- ==============================
+     FOOTER
+================================ -->
+
 <footer>
-  <p>© 2026 Sandeep Upadhyay | Personal Portfolio</p>
-  <p>Designed with passion for technology and innovation.</p>
+
+  <p>
+    © 2026 Sandeep Upadhyay | Personal Portfolio
+  </p>
+
+  <p>
+    Designed with passion for technology and innovation.
+  </p>
+
 </footer>
 
 </body>
 </html>
-
