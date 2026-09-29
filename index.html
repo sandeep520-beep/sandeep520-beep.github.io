@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Upadhyay | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #263244;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: radial-gradient(circle at top right, #1e3a5f, #0b1120 65%);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.tag {
+    color: #60a5fa;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.15;
+    margin: 20px 0;
+    color: white;
+}
+
+.hero h2 {
+    color: #93c5fd;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #3b82f6;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #60a5fa;
+    color: #93c5fd;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.section-title span {
+    color: #60a5fa;
+}
+
+.about-text {
+    max-width: 850px;
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #151f32;
+    padding: 27px;
+    border: 1px solid #29364c;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+}
+
+.card h3 {
+    color: #93c5fd;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #172b49;
+    border: 1px solid #31547e;
+    padding: 10px 17px;
+    border-radius: 25px;
+    color: #bfdbfe;
+}
+
+.project-link {
+    display: inline-block;
+    color: #60a5fa;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.timeline {
+    border-left: 2px solid #3b82f6;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+}
+
+.timeline-item h3 {
+    color: #93c5fd;
+}
+
+.timeline-item p {
+    color: #cbd5e1;
+}
+
+.contact {
+    text-align: center;
+    background: #111827;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    border-top: 1px solid #263244;
+}
+
+@media(max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 55px 7%;
+    }
+
+    section {
+        padding: 60px 7%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Sandeep.</div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="tag">WELCOME TO MY PORTFOLIO</div>
+
+        <h1>Hi, I'm Sandeep Upadhyay.</h1>
+
+        <h2>Data Science | Machine Learning | Computer Vision | IoT</h2>
+
+        <p>
+            M.Tech student at IIT Kharagpur with a background in
+            Agricultural Engineering and an interest in Data Science,
+            Artificial Intelligence, Computer Vision and intelligent
+            engineering systems.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="btn">Explore My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="resume.pdf" class="btn btn-outline" target="_blank">
+                My Resume
+            </a>
+        </div>
+    </div>
+</header>
+
+<section id="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <p class="about-text">
+        I am Sandeep Upadhyay, currently pursuing M.Tech in
+        Aquacultural Engineering at the Indian Institute of Technology
+        Kharagpur. I completed my B.Tech in Agricultural Engineering.
+
+        My interests include Data Science, Machine Learning,
+        Deep Learning, Computer Vision, Internet of Things and
+        research-oriented engineering applications.
+
+        I enjoy solving practical problems by combining programming,
+        data analysis, experimental research and technology.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Technical <span>Skills</span></h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Programming</h3>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">MySQL</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Data Science</h3>
+            <div class="skills">
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">Data Analysis</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Machine Learning</h3>
+            <div class="skills">
+                <span class="skill">Random Forest</span>
+                <span class="skill">Linear Regression</span>
+                <span class="skill">SVR</span>
+                <span class="skill">GBM</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Computer Vision & IoT</h3>
+            <div class="skills">
+                <span class="skill">OpenCV</span>
+                <span class="skill">YOLO</span>
+                <span class="skill">ESP32</span>
+                <span class="skill">Raspberry Pi</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Fish Locomotion Analysis</h3>
+            <p>
+                Computer-vision-based analysis of Nile Tilapia swimming
+                motion, including body midline extraction, tail-beat
+                frequency, lateral amplitude and body curvature.
+            </p>
+            <a href="#research" class="project-link">View Research →</a>
+        </div>
+
+        <div class="card">
+            <h3>Autonomous Fish Feeder</h3>
+            <p>
+                Developed an automated fish feeding concept using
+                microcontroller-based control and electronic components
+                for aquaculture applications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>IoT-Based Aquaculture Monitoring</h3>
+            <p>
+                Exploring sensor-based monitoring of water quality
+                parameters such as pH, dissolved oxygen, temperature
+                and TDS.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Runoff Estimation</h3>
+            <p>
+                Estimated runoff in the GKVK Dryland Micro Watershed
+                using the NRCS Curve Number Method as a B.Tech
+                final-year project.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Facebook bAbI Chatbot</h3>
+            <p>
+                NLP-based chatbot project focused on question answering
+                using the bAbI task framework.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="research">
+    <h2 class="section-title">Research <span>Work</span></h2>
+
+    <div class="card">
+        <h3>
+            Experimental Characterization and Mathematical Modeling
+            of Carangiform Locomotion in Nile Tilapia
+        </h3>
+
+        <p>
+            My M.Tech research focuses on understanding fish swimming
+            kinematics through video-based motion analysis.
+        </p>
+
+        <br>
+
+        <p><strong>Research focus:</strong></p>
+
+        <ul style="margin-left:22px;color:#cbd5e1;">
+            <li>Fish body midline reconstruction</li>
+            <li>Caudal-fin movement analysis</li>
+            <li>Tail-beat frequency and lateral amplitude</li>
+            <li>Wavelength and phase propagation</li>
+            <li>Body curvature and swimming kinematics</li>
+            <li>Computer vision-based motion tracking</li>
+        </ul>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Experience & <span>Leadership</span></h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>General Secretary – Technology</h3>
+            <p>Atal Bihari Vajpayee Hall of Residence, IIT Kharagpur</p>
+            <p>
+                Coordinated technology initiatives and student
+                participation in hall activities.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>RAWE Training</h3>
+            <p>Mudigere, Karnataka</p>
+            <p>
+                Participated in farmer surveys, Participatory Rural
+                Appraisal, technology dissemination and rural
+                agricultural activities. Led a team of 27 students.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Technical Training</h3>
+            <p>SRFMTTI and Biodiesel Production</p>
+            <p>
+                Completed technical training in agricultural
+                machinery and biodiesel production.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+
+    <p>
+        Interested in Data Science, Machine Learning,
+        research and collaborative opportunities.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+        <a href="https://github.com/sandeep520-beep"
+           class="btn" target="_blank">GitHub</a>
+
+        <a href="https://www.linkedin.com/"
+           class="btn btn-outline" target="_blank">LinkedIn</a>
+
+        <a href="mailto:YOUR_EMAIL@gmail.com"
+           class="btn btn-outline">Email Me</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Sandeep Upadhyay | Personal Portfolio
+</footer>
+
+</body>
+</html>
